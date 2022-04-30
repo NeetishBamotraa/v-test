@@ -105,58 +105,127 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,11,26,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0a0b1a",GradientType=1);
 }
 
-.navbar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 10vw;
+@media (orientation: portrait){
+    .dknavbar{
+        display: none;
+    }
+
+    .mbnavbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 10vw;       
+    }
+
+    .mbnavbar>.navbarlogo{
+        position: relative;
+        width: 16vw;
+        height: 100%;
+    }
+    
+    .mbnavbar>.navbarlogo > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .mbnavbar > .navbaroptions {
+        width: 20vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+
+
+    .mbmenumore{
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        background-color: #0A0B1A;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .mbmenumore > .options{
+        cursor: pointer;
+        font-size: 2vh;
+        line-height: 4vh;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
 }
 
-.navbarlogo{
-    position: relative;
-    width: 8vw;
-    height: 100%;
+@media (orientation: landscape){
+    .mbnavbar,.mbmenumore{
+        display: none;
+    }
+    .dknavbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 10vw;       
+    }
+    
+    .dknavbar>.navbarlogo{
+        position: relative;
+        width: 8vw;
+        height: 100%;
+    }
+    
+    .dknavbar>.navbarlogo > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .dknavbar>.navbaroptions{
+        width: 22vw;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2vh;
+        line-height: 4vh;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    
+    .dknavbar>.navbaroptions > .search{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .dknavbar>.navbaroptions > .search > .icon{
+        font-size: 2vh;
+        margin-right: 5px;
+    }
+    
+    .dknavbar>.navbaroptions > .nvopt{
+        cursor: pointer;
+    }
 }
 
-.navbarlogo > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
-.navbaroptions{
-    width: 22vw;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2vh;
-    line-height: 4vh;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
 
-.navbaroptions > .search{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbaroptions > .search > .icon{
-    font-size: 2vh;
-    margin-right: 5px;
-}
-
-.navbaroptions > .nvopt{
-    cursor: pointer;
-}
 
 .title1{
     position: absolute;
@@ -396,6 +465,172 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.cnt3{
+    position: absolute;
+    top: 162vh;
+    left: 12vw;
+    width: 80%;
+}
+
+.cnt3 > .topbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cnt3 > .topbar > .title{
+    
+    font-size: 3vh;
+    line-height: 5vh;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cnt3 > .topbar > .title > .titleUL{
+    padding-bottom: 0.8vh;   
+    border-bottom:2px solid #0259EB;
+}
+
+.cnt3 > .topbar > .more{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vh;
+    line-height: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+.cnt3 > .topbar > .more div{
+    margin-left: 1vw;
+}
+
+.cnt3 > .topbar > .more div .cur{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cnt3 > .main{
+    width: 100%;
+    height: 40vh;
+    margin-top: 8vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.cnt3 > .main > .cardct{
+    position: relative;
+    flex: 0 0 auto;
+    margin-right:4vw;
+    width: 40vh;
+    height: 30vh;
+}
+
+.cnt3 > .main > .cardct > .cardbck{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    border-radius: 16px;
+    background: -moz-linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%);
+    background: -webkit-linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%);
+    background: linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%);
+}
+.cnt3 > .main > .cardct > .cardfront{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background: #0A0B1A;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    border: 2px solid #E5AF56;
+}   
+
+.cnt3 > .main > .cardct > .cardfront >.usr{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+}
+
+.cnt3 > .main > .cardct > .cardfront >.usr > .userImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+}
+.cnt3 > .main > .cardct > .cardfront >.usr > .userImg>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.cnt3 > .main > .cardct > .cardfront >.usr > .usrData{
+    position: absolute;
+    top: 0;
+    left: 22%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cnt3 > .main > .cardct > .cardfront >.usr > .usrData>.name{
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    font-size: 1.8vh;
+}
+.cnt3 > .main > .cardct > .cardfront >.usr > .usrData>.area{
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    font-size: 1.5vh;
+    color: #E5C558;
+    display: flex;
+    align-items: center;
+}
+
+.cnt3 > .main > .cardct > .cardfront >.usr > .usrData>.area>.flag{
+    height: fit-content;
+    width: 2.5vh;
+    margin-right: 5px;
+}
+.cnt3 > .main > .cardct > .cardfront >.usr > .usrData>.area>.flag>img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cnt3 > .main > .cardct > .cardfront > .review{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 80%;
+    height: 45%;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8vh;
+    overflow: hidden;
 }
 
 

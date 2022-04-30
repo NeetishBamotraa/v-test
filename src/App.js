@@ -12,7 +12,13 @@ import bennyPic from "./assets/benny.png";
 import vijayPic from "./assets/vijay.png";
 import andreaPic from "./assets/andrea.png";
 import shilpaPic from "./assets/shilpa.png";
+import usr1img from "./assets/review1.png";
+import usr2img from "./assets/review2.png";
+import usr3img from "./assets/review3.png";
+import us from "./assets/us.png";
+import it from "./assets/it.png";
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
   const [singerTickets, setsingerTickets] = useState([
@@ -21,13 +27,39 @@ function App() {
     false,
     false,
   ]);
+
+  const [mbOptOpen, setmbOptOpen] = useState(false);
+
   return (
     <div className="main">
       <div className="mainbgimage">
         <img src={bgimage} />
         <div className="overlay"></div>
       </div>
-      <header className="navbar">
+      <div className="mbnavbar">
+        <div className="navbarlogo">
+          <img src={navlogo} />
+        </div>
+        <div className="navbaroptions">
+          <SearchIcon className="search" />
+          <LocalMallIcon className="cart" />
+          <MenuIcon
+            onClick={() => {
+              setmbOptOpen(!mbOptOpen);
+            }}
+            className="menu"
+          />
+        </div>
+      </div>
+
+      {mbOptOpen && (
+        <div className="mbmenumore">
+          <div className="options">Help</div>
+          <div className="options">Account</div>
+        </div>
+      )}
+
+      <div className="dknavbar">
         <div className="navbarlogo">
           <img src={navlogo} />
         </div>
@@ -40,7 +72,8 @@ function App() {
           <div className="nvopt">Account</div>
           <LocalMallIcon className="nvopt" />
         </div>
-      </header>
+      </div>
+
       <div className="title1">Cari Cari</div>
       <div className="title2">
         Live from their sofa to yours. Get closer to your favorite artists, and
@@ -190,6 +223,96 @@ function App() {
                 >
                   <ConfirmationNumberIcon />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="cnt3">
+        <div className="topbar">
+          <div className="title">
+            <span className="titleUL">Re</span>
+            <span>views</span>
+          </div>
+          <div className="more">
+            <div>
+              <span className="cur">1</span>/12
+            </div>
+            <div>&larr;</div>
+            <div>&rarr;</div>
+          </div>
+        </div>
+        <div className="main">
+          <div className="cardct">
+            <div className="cardbck"></div>
+            <div className="cardfront">
+              <div className="usr">
+                <div className="userImg">
+                  <img src={usr1img} />
+                </div>
+                <div className="usrData">
+                  <div className="name">Hellen Jummy</div>
+                  <div className="area">
+                    <div className="flag">
+                      <img src={us} />
+                    </div>
+                    <div className="loc">PALO ALTO, CA</div>
+                  </div>
+                </div>
+              </div>
+              <div className="review">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                in donec in nisi vitae. Vestibulum pellentesque eget laoreet
+                adipiscing.
+              </div>
+            </div>
+          </div>
+          <div className="cardct">
+            <div className="cardbck"></div>
+            <div className="cardfront">
+              <div className="usr">
+                <div className="userImg">
+                  <img src={usr2img} />
+                </div>
+                <div className="usrData">
+                  <div className="name">Isaac Oluwatemilorun</div>
+                  <div className="area">
+                    <div className="flag">
+                      <img src={it} />
+                    </div>
+                    <div className="loc">PALO ALTO, CA</div>
+                  </div>
+                </div>
+              </div>
+              <div className="review">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                in donec in nisi vitae. Vestibulum pellentesque eget laoreet
+                adipiscing.
+              </div>
+            </div>
+          </div>
+          <div className="cardct">
+            <div className="cardbck"></div>
+            <div className="cardfront">
+              <div className="usr">
+                <div className="userImg">
+                  <img src={usr3img} />
+                </div>
+                <div className="usrData">
+                  <div className="name">Hellen Jummy</div>
+                  <div className="area">
+                    <div className="flag">
+                      <img src={us} />
+                    </div>
+                    <div className="loc">PALO ALTO, CA</div>
+                  </div>
+                </div>
+              </div>
+              <div className="review">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                in donec in nisi vitae. Vestibulum pellentesque eget laoreet
+                adipiscing.
               </div>
             </div>
           </div>
