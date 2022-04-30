@@ -1,8 +1,62 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+
+root {
+-ms-overflow-style: none;  
+scrollbar-width: none; 
+}
+
+
+
+
 /**************************************************FONTs***************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/* .opensansfontregular400{
+/* 
     font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+/*
+font-family: 'Libre Baskerville', serif;
+font-style: bold;
+font-weight: 700;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+/*
+font-family: 'Libre Baskerville', serif;
+font-style: normal;
+font-weight: 400;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* 
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+/* 
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap');
+/*
+font-family: 'Quattrocento', serif;
+font-style: normal;
+font-weight: 700;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* 
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
 } */
@@ -61,7 +115,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
     justify-content: space-between;
     align-items: center;
     padding: 1vh 10vw;
-    border: 1px solid white;
 }
 
 .navbarlogo{
@@ -83,12 +136,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
     justify-content: space-between;
     align-items: center;
     font-size: 2vh;
-    line-height: 6vh;
+    line-height: 4vh;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    border: 1px solid white;
 }
 
 .navbaroptions > .search{
@@ -96,4 +148,257 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
     justify-content: space-between;
     align-items: center;
 }
+
+.navbaroptions > .search > .icon{
+    font-size: 2vh;
+    margin-right: 5px;
+}
+
+.navbaroptions > .nvopt{
+    cursor: pointer;
+}
+
+.title1{
+    position: absolute;
+    top: 30vh;
+    left: 12vw;
+    font-family: 'Libre Baskerville', serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: min(8vh,8vw);
+    line-height: min(10vh,10vw);
+    color: white;
+}
+.title2{
+    position: absolute;
+    top: calc(30vh + min(10vh,10vw));
+    left: 12vw;
+    width: 38%;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: min(3vh,3vw);
+    line-height: min(4vh,4vw);
+    color: white;
+    opacity: 0.6;
+}
+
+.cnt1{
+    position: absolute;
+    top: 70vh;
+    left: 12vw;
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.cnt1 > .circle{
+    flex: 0 0 auto;
+    margin-right:10vw;
+    border-radius: 100%;
+    width:20vh;
+    height: 20vh;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    padding: 1vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cnt1 > .circle > .icon > .iconmain{
+    font-size: 3vh;
+    color:#0259EB;
+}
+
+.cnt1 > .circle > .icon > .iconmain1{
+    font-size: 3vh;
+    color:white;
+    opacity: 0.8;
+}
+
+.cnt1 > .circle > .value{
+    color: white;
+    font-size: 2vh;
+    line-height: 3vh;
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cnt1 > .circle > .label{
+    color: white;
+    opacity: 0.5;
+    font-size: 2vh;
+    line-height: 3vh;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cnt2{
+    position: absolute;
+    top: 102vh;
+    left: 12vw;
+    width: 80%;
+}
+
+.cnt2 > .topbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cnt2 > .topbar > .title{
+    
+    font-size: 3vh;
+    line-height: 5vh;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cnt2 > .topbar > .title > .titleUL{
+    padding-bottom: 0.8vh;   
+    border-bottom:2px solid #0259EB;
+}
+
+.cnt2 > .topbar > .more{
+    color: #E5C558;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2vh;
+    line-height: 3vh;
+}
+
+.cnt2 > .main{
+    width: 100%;
+    height: 40vh;
+    margin-top: 8vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.cnt2 > .main > .cardct{
+    position: relative;
+    flex: 0 0 auto;
+    margin-right:4vw;
+    width: 30vh;
+    height: 40vh;
+}
+
+.cnt2 > .main > .cardct > .cardbck{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 8px;
+    background: -moz-linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%);
+    background: -webkit-linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%);
+    background: linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%)
+}
+.cnt2 > .main > .cardct > .cardfront{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: #111229;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}   
+
+.cnt2 > .main > .cardct > .cardfront > .profilepic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 60%;
+}
+
+.cnt2 > .main > .cardct > .cardfront > .profilepic > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cnt2 > .main > .cardct > .cardfront > .tag{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    background-color: #E5C558;
+    padding: 0.4vh 0.6vh;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6vh;
+    color: #682F26;
+}
+.cnt2 > .main > .cardct > .cardfront > .singer{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.6vh;
+    color: white;
+}
+.cnt2 > .main > .cardct > .cardfront > .more{
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.cnt2 > .main > .cardct > .cardfront > .more > .title{
+    color: #0259EB;
+    font-size: 2vh;
+}
+
+.cnt2 > .main > .cardct > .cardfront > .more > .yu{
+    color: white;
+    opacity: 0.1;
+    font-size: 3vh;
+    margin-left: 30%;
+}
+
+.cnt2 > .main > .cardct > .cardfront > .more > .icon{
+    color: #0259EB;
+    font-size: 2.5vh;
+    transform: rotateZ(90deg);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.cnt2 > .main > .cardct > .cardfront > .more > .icon1{
+    color: skyblue;
+    font-size: 2.5vh;
+    transform: rotateZ(90deg);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
 
